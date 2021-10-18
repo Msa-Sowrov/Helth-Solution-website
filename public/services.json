@@ -1,0 +1,39 @@
+[
+    {
+      "key": 1,
+      "name": "Urgent Care",
+      "img": "https://i.ibb.co/V9tjCvN/urgent-care.png",
+      "desf": "Urgent care centers provide easy access to quality \t\thealthcare for the times when your primary care physician's \toffices are closed. "
+    },
+    {
+      "key": 2,
+      "name": "Pediatric Care",
+      "img": "https://i.ibb.co/g7Bd3Pr/pediatrician.png",
+      "desf": "Pediatrics is the specialty of medical science concerned \t\twith the physical, mental, and social health of children \t\tfrom birth to young adulthood."
+    },
+    {
+      "key": 3,
+      "name": "Mental Hsealth Services.",
+      "img": "https://i.ibb.co/4PYdjGW/mental-health.png",
+      "desf": " treatment of mental illnesses and the improvement of mental health in people with mental disorders or problems. "
+    },
+    {
+      "key": 4,
+      "name": "Dental Care",
+      "img": "https://i.ibb.co/LZ7Kbw2/dental-care.jpg",
+      "desf": "Dental or oral health is concerned with your teeth,    gums and mouth."
+    },
+    {
+      "key": 5,
+      "name": "Hearing and Vision Services",
+      "img": "https://i.ibb.co/Fzx7xSY/hearing.png",
+      "desf": "Services for people with hearing loss — Services for people with vision impairment. Vision loss can affect people of all ages"
+    },
+    {
+      "key": 6,
+      "name": "management of chronic health conditions.",
+      "img": "https://i.ibb.co/LtdHhrD/chronic-health.jpg",
+      "desf": "Chronic Disease Management (CDM) is ongoing care and support to assist individuals impacted by a chronic health condition with the medical care, knowledge, skills and resources they need to better manage on a day to day basis."
+    }
+
+  ]
