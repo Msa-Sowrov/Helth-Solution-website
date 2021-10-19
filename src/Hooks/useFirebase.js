@@ -7,21 +7,29 @@ const useFirebase = ()=>{
     const [error, setError] = useState('');
     appInit();
     const auth = getAuth();
+    const [loding, setLoding] = useState(true)
 
 
     const createAccount=(email, password, userName)=>{
+        setLoding(true)
         createUserWithEmailAndPassword(auth, email, password)
         .then((result) => {
+                setUser(result.user)
                 setUserName(userName)
                 setError('')
+                window.location.reload()
             })
             .catch((error) => {
                 const errorMessage = error.message;
                 setError(errorMessage);
-            });
+            })
+            .finally(
+                setLoding(true)
+            );
                 }
 
     const signInWithEmail=(email, password)=>{
+        setLoding(true)
         signInWithEmailAndPassword(auth, email, password)
                 .then((result) => {
                     setUser(result.user)
@@ -30,13 +38,26 @@ const useFirebase = ()=>{
                 .catch((error) => {
                     const errorMessage = error.message;
                     setError(errorMessage)
-                });
+                })
+                .finally(
+                    setLoding(false)
+                );
     }
     const signInWithGoogle =()=>{
+        setLoding(true)
         const provider = new GoogleAuthProvider();
         signInWithPopup(auth, provider)
-        .then(result=> setUser(result.user))
+        .then(result=>{
+            setUser(result.user)
+            setError('')
+        }
+
+            
+        )
         .catch(error=> setError(error.message))
+        .finally(
+            setLoding(false)
+        )
     }
     const setUserName = (name)=>{
         console.log(name)
@@ -51,17 +72,22 @@ const useFirebase = ()=>{
             if (user) {
                 setUser(user)   
             } else {
-              // User is signed out
-              // ...
+              setUser({})
             }
+            setLoding(false )
           });
     },[])
 
     const logOut =()=>{
+        setLoding(true)
         signOut(auth)
         .then(() => {
             setUser({})
           })
+          .finally(
+                setLoding(false)
+          )
+            
     }
 return{
     createAccount,
@@ -69,7 +95,8 @@ return{
     user,
     error,
     signInWithGoogle,
-    logOut
+    logOut,
+    loding
 
 }}
 

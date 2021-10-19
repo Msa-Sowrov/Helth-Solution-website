@@ -74,7 +74,6 @@ const Login = () => {
             }
             </form>
             <span>or</span>
-            <span>{console.log(user)}</span>
             <br/>
             <button className="btn btn-success" onClick={signInWithGoogle}> SignIn With Google</button>
         </div>

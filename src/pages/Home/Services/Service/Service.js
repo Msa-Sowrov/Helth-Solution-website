@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Service.css'
 const Service = ({service}) => {
-    console.log(service)
+ 
     const {img, name, desf} = service;
     return (
         <div id="card" className="card col-lg-3 col-12">

@@ -15,7 +15,7 @@ const Appointment = () => {
             <div className="col-lg-6 col-12" >
             <h2>Make An Appoinment For: <span className='text-primary'>{serviceName}</span> </h2>
              <form>
-                 <b>paitent Name : {user.displayName}</b> <br/>
+                 <b>Paitent Name : {user.displayName}</b> <br/>
                  <div className="mb-3">
                 <label htmlFor="exampleInputPassword1" className="form-label">Schdule date and time:</label>
                 <input type="text" className="form-control" id="exampleInputPassword1"/>   

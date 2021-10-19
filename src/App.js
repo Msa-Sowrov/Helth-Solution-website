@@ -8,6 +8,11 @@ import ServicesLoad from './pages/Home/Services/ServicesLoad/ServicesLoad';
 import AuthContextProvider from './Context/authContextProvider';
 import Appointment from './pages/Home/Services/Appointment/Appointment';
 import Confirm from './pages/Confirm/Confirm';
+import PrivateRouter from './PrivateRouter/PrivateRouter';
+import AllProduct from './pages/Product/AllProduct/AllProduct';
+import NotFound from './pages/NotFound/NotFound';
+import About from './pages/Home/About/About';
+import Footer from './pages/Footer/Footer';
 
 function App() {
   return (
@@ -23,19 +28,36 @@ function App() {
         </Route>
         <Route path="/services">
           <Header></Header>
-            <ServicesLoad></ServicesLoad>         
+            <ServicesLoad></ServicesLoad>
+            <Footer></Footer>         
         </Route>
-        <Route path="/service/:serviceName">
+        <PrivateRouter path="/service/:serviceName">
           <Header></Header>
           <Appointment></Appointment>
-        </Route>
+          <Footer></Footer>
+        </PrivateRouter>
         <Route path="/login">
           <Header></Header>
           <Login></Login>
+          <Footer></Footer>
         </Route>
         <Route path="/confirm">
           <Header></Header>
             <Confirm></Confirm>
+            <Footer></Footer>
+        </Route>
+        <PrivateRouter path="/shop">
+              <Header></Header>
+              <AllProduct></AllProduct>
+              <Footer></Footer>
+        </PrivateRouter>
+        <Route path="/about">
+          <Header></Header>
+          <About></About>
+          <Footer></Footer>
+        </Route>
+        <Route path="*">
+          <NotFound></NotFound>
         </Route>
       </Switch>
       </BrowserRouter>

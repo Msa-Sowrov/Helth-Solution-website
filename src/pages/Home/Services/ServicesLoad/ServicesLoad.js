@@ -8,7 +8,7 @@ const ServicesLoad = () => {
         .then(res=>res.json())
         .then(data=>setService(data))
     },[])
-    console.log(services)
+    
     return (
         <div className="container">
             <h1 className="text-center m-5">Find What We Do</h1>
