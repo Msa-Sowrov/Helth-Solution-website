@@ -11,7 +11,7 @@ const ServicesLoad = () => {
     
     return (
         <div className="container">
-            <h1 className="text-center m-5">Find What We Do</h1>
+            <h1 className="text-center m-5 text-primary">Find What We Do</h1>
             <div className="row gap-3 d-flex justify-content-center">
                 {
                     services.map(service=><Service

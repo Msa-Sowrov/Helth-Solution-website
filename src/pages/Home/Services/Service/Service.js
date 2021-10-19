@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Service.css'
 const Service = ({service}) => {
  
-    const {img, name, desf} = service;
+    const {img,key, name, desf} = service;
     return (
         <div id="card" className="card col-lg-3 col-12">
             
@@ -13,7 +13,7 @@ const Service = ({service}) => {
                 <small>{desf}</small><br/>
                 </div>
                 <div className="card-footer">
-                    <Link to={`/service/${name}`}>
+                    <Link to={`/service/${key}`}>
                         <button className="btn btn-danger">Make An Appointment</button>
                     </Link>
                 </div>

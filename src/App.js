@@ -13,6 +13,7 @@ import AllProduct from './pages/Product/AllProduct/AllProduct';
 import NotFound from './pages/NotFound/NotFound';
 import About from './pages/Home/About/About';
 import Footer from './pages/Footer/Footer';
+import ServiceDetail from './pages/Home/Services/ServiceDetail/ServiceDetail';
 
 function App() {
   return (
@@ -31,7 +32,12 @@ function App() {
             <ServicesLoad></ServicesLoad>
             <Footer></Footer>         
         </Route>
-        <PrivateRouter path="/service/:serviceName">
+        <PrivateRouter path="/service/:serviceKey">
+          <Header></Header>
+              <ServiceDetail></ServiceDetail>
+          <Footer></Footer>
+        </PrivateRouter>
+        <PrivateRouter path="/appointment">
           <Header></Header>
           <Appointment></Appointment>
           <Footer></Footer>

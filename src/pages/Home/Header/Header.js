@@ -26,8 +26,8 @@ const Header = () => {
         <li className="nav-item">
           <Link className="nav-link active" to="/shop">Shop</Link>
         </li>
-        <li className="nav-item active">
-          <a className="nav-link" href="#timing">Timing</a>
+        <li className="nav-item ">
+          <a className="nav-link active" href="/appointment">Appointment</a>
         </li>
       </ul>
           <div className="d-flex align-items-center">

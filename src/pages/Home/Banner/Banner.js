@@ -2,7 +2,8 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <div className="container my-5">
+        <div className="container my-5 text-center">
+                <h1 className="text-primary">We Are here For your Health and Satisfication</h1>
                 <div className="row d-flex align-items-center">
             <div className="col-md-6 col-12" >
                 <img className="img-fluid" src="https://i.ibb.co/Jmc1RCV/pngegg-26.png" alt="" />
