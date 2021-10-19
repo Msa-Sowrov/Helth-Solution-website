@@ -11,6 +11,7 @@ const AllProduct = () => {
     },[])    
     return (
         <div className="container">
+            <h1 className="text-primary text-center my-5">Our Quality Product</h1>
             <div className="row gap-5 d-flex align-items-center justify-content-center">
             {
                 products.map(product => <Product
