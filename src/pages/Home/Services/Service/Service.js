@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Service.css'
 const Service = ({service}) => {
     console.log(service)
@@ -12,8 +13,9 @@ const Service = ({service}) => {
                 <small>{desf}</small><br/>
                 </div>
                 <div className="card-footer">
-
-                <button className="btn btn-danger">detail</button>
+                    <Link to={`/service/${name}`}>
+                        <button className="btn btn-danger">Make An Appointment</button>
+                    </Link>
                 </div>
             </div>
        
